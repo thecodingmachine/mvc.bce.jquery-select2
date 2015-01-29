@@ -1,7 +1,9 @@
 <?php
 namespace Mouf\MVC\BCE\Classes\Renderers;
 
+use Mouf\Html\Utils\WebLibraryManager\WebLibraryManager;
 use Mouf\Html\Widgets\Form\Styles\LayoutStyle;
+use Mouf\MVC\BCE\Classes\Descriptors\BCEFieldDescriptorInterface;
 use Mouf\MVC\BCE\Classes\Descriptors\FieldDescriptorInstance;
 use Mouf\Html\Widgets\Form\SelectField;
 use Mouf\Html\Tags\Option;
@@ -75,7 +77,7 @@ class Select2FieldRenderer extends DefaultViewFieldRenderer implements SingleFie
 	 * (non-PHPdoc)
 	 * @see FieldRendererInterface::getJS()
 	 */
-	public function getJSEdit($descriptor, $bean, $id){
+	public function getJSEdit(BCEFieldDescriptorInterface $descriptor, $bean, $id, WebLibraryManager $webLibraryManager){
 		/* @var $descriptorInstance FieldDescriptorInstance */
 		return array();
 	}
